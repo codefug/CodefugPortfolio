@@ -1,203 +1,14 @@
-/* 전체 설정 */
+/* 폰트 설정 */
 @font-face {
     font-family: myFont;
     src: url(font/SpectralSC-Bold.ttf);
     font-weight: bold;
 }
 
-/* 임시설정 */
-img {
+/* img 설정 */
+img{
     width: 40px;
-    border-radius: 20px;
 }
-
-a {
-    text-decoration: none;
-}
-
-body {
-    font-family: myFont;
-}
-
-p {
-    margin: 0;
-}
-
-button {
-    border-radius: 20px;
-    cursor: pointer;
-}
-
-/* 전체 레이아웃 */
-#body {
-    display: grid;
-    grid-template: 150px 1fr/ 1fr 9fr;
-    height: 100%;
-    width: 100%;
-    background-color: #38c7ff22;
-}
-
-header {
-    grid-column: 2/3;
-}
-
-sidebar {
-    grid-column: 1/2;
-    grid-row: 1/-1;
-}
-
-footer {
-    display: grid;
-    justify-items: center;
-    align-items: center;
-    color: white;
-    background-color: black;
-}
-
-/* header */
-header {
-    display: grid;
-    grid-template: 1fr 2fr/ 4fr 1fr;
-    background-color: #38c7ff;
-    border-bottom-left-radius: 20px;
-    justify-items: center;
-    align-items: center;
-    padding: 20px;
-    padding-right: 0px;
-}
-
-#headprofileContainer {
-    display: flex;
-}
-#headprofileContainer>button{
-    background-color:inherit;
-    border:none;
-    padding:0;
-}
-#contentprofileContainer {
-    display: grid;
-    grid-template: 50% 50% / 40px 1fr;
-    justify-self: flex-start;
-}
-
-#contentprofileContainer img {
-    grid-row: 1/-1;
-}
-
-#buttonContainer {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-#headerSearch {
-    justify-self: stretch;
-    display: flex;
-}
-
-input[type="search"] {
-    flex: 1;
-    border-radius: 10px;
-}
-
-/* placeholder없어지면 위에 추가 */
-
-#searchbutton {
-    background-color: inherit;
-    border: none;
-    right: 0;
-}
-
-#logo {
-    display: grid;
-    justify-items: center;
-    align-items: center;
-}
-
-#logo h1 {
-    margin: 0;
-    align-self: flex-start;
-}
-
-/* sidebar */
-sidebar {
-    color: black;
-    display: grid;
-    grid-template-rows: 200px 100px;
-    grid-auto-rows: 100px;
-    justify-items: center;
-    padding-right: 20px;
-}
-
-sidebar>div>p:hover {
-    cursor: pointer;
-}
-
-#logo>img {
-    width: 60px;
-    border-radius: inherit;
-}
-
-/* main */
-#main {
-    padding: 10px;
-    padding-right: 0px;
-    display: grid;
-    grid-template: 30px 1fr 30px 1fr 7fr/ 6fr 1fr;
-    gap: 15px;
-}
-
-#newsName {
-    grid-column: 2/3;
-    grid-row: 1/2;
-}
-
-.newset {
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-}
-
-.news {
-    flex: 1;
-    border-bottom: 1px solid rgb(196, 196, 196);
-    border-block-start: none;
-}
-
-#projectset {
-    grid-row: 2/-1;
-}
-
-#projectset .card {
-    background-color: white;
-    border-radius: 20px;
-    border: 1px solid black;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    overflow: hidden;
-}
-
-.card {
-    background-color: white;
-    border-radius: 20px;
-    border: 1px solid black;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-}
-
-.card .cardImage {
-    flex: 1;
-    display: flex;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    border: 20px;
-    border-bottom-right-radius: 0px;
-    border-bottom-left-radius: 0px;
-}
-
 .Loginform {
     background-image: url(LoginForm.png);
 }
@@ -214,31 +25,52 @@ sidebar>div>p:hover {
     background-image: url(RockScissorsPaper.png);
 }
 
-#friendsName {
-    grid-column: 2/3;
+/* body */
+body{
+    display:flex;
+    flex-direction: column;
+}
+#body{
+    flex:1;
+    display:grid;
+    grid-template: 1fr 4fr / 1fr 4fr;
 }
 
-#friendset {
-    grid-column: 2/3;
-    padding: 15px;
-}
-
-.lastcard {
-    font-size: 4rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.lastcard:hover {
-    cursor: pointer;
-}
-
-/* section */
-#projectset {
+/* header */
+header{
     display: grid;
-    grid-template: repeat(auto-fill, minmax(300px, 1fr)) / repeat(auto-fill, minmax(200px, 1fr));
-    gap: 20px;
+    grid-template: auto 1fr/ 3fr auto;
+    grid-column: 2/3;
+    grid-row:1/2;
 }
+form{
+
+}
+#headprofileContainer{
+    display: flex;
+}
+#contentprofileContainer{
+    display: flex;
+}
+#buttonContainer{
+
+}
+/* sidebar */
+sidebar{
+    grid-row:1/-1;
+}
+/* #main */
 
 /* footer */
+footer{
+    background-color: black;
+    color:white;
+    opacity: 0.6;
+    z-index: 1;
+}
+footer p{
+    margin:0px;
+}
+#footer p{
+    text-align: center;
+}
