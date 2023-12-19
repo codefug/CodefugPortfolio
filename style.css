@@ -237,7 +237,7 @@ sidebar>div>p:hover {
 /* section */
 #projectset {
     display: grid;
-    grid-template: repeat(auto-fill, minmax(400px, 1fr)) / repeat(auto-fill, minmax(200px, 1fr));
+    grid-template: repeat(auto-fill, minmax(300px, 1fr)) / repeat(auto-fill, minmax(200px, 1fr));
     gap: 20px;
 }
 
