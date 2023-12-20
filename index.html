@@ -12,102 +12,117 @@
 </head>
 
 <body>
+    <div id="Loading">
+        <div id="LoadingBox">
+            <p>Just moment</p>
+        </div>
+    </div>
     <div id="body">
         <header>
-            <form action="" method="get" id="headerSearch">
+            <form action="" method="get" id="headerSearchContainer">
                 <input type="search" id="searchbar" placeholder="project search">
                 <button type="button" id="searchbutton">
                     <img src="/icons/magnify.svg" alt="scope which means searchbar">
                 </button>
             </form>
-            <div id="headprofileContainer">
-                <button type="button">
+            <div id="headerprofileContainer">
+                <button type="button" id="headerprofileButton">
                     <img src="/icons/bell-badge.svg" alt="notification">
                 </button>
-                <div>
-                    <img src="/icons/happy.jpeg" alt="profileImage">
-                </div>
-                <p>Code fug</p>
+                <img src="/icons/happy.jpeg" alt="profileImage" id="headerprofile">
+                <p style="font-weight:bold">Code fug</p>
             </div>
             <div id="contentprofileContainer">
                 <img src="/icons/happy.jpeg" alt="profileImage">
                 <div>
-                    <p style="font-size: 0.5rem;">Hi there</p>
-                    <p style="margin-left:10px">Codefug(@fug)</p>
+                    <p>2023-12-21</p>
+                    <p>Codefug(@fug)</p>
                 </div>
             </div>
             <div id="buttonContainer">
                 <button type="button">Add project</button>
-                <button type="button">Delete project</button>
+                <button typse="button">Delete project</button>
             </div>
         </header>
         <sidebar>
-            <div id="logo" class="headlogo">
-                <img src="icons/monitor-cellphone.svg" alt="computerlogo">
+            <div id="logo" class="headlogoContainer">
+                <img src="icons/monitor-cellphone.svg" alt="computerlogo" id="headlogo">
                 <h1>Portfolio</h1>
             </div>
-            <div>
-                <img src="" alt="" class="sidelogo">
+            <div class="sidebarlistitem">
+                <img src="/icons/home-outline.svg" alt="homelogo" class="sidelogo">
                 <p>Home</p>
             </div>
-            <div>
-                <img src="" alt="" class="sidelogo">
+            <div class="sidebarlistitem">
+                <img src="/icons/chat.svg" alt="messagelogo" class="sidelogo">
                 <p>Messages</p>
             </div>
-            <div>
-                <img src="" alt="" class="sidelogo">
+            <div class="sidebarlistitem">
+                <img src="/icons/history.svg" alt="historylogo" class="sidelogo">
                 <p>History</p>
             </div>
-            <div>
-                <a href="https://github.com/codefug"><i class="fa fa-github" style="font-size:36px"></i></a>
-            </div>
+            <a class="sidebarlistitem" href="https://github.com/codefug"><i class="fa fa-github"
+                    style="font-size:36px"></i></a>
         </sidebar>
         <div id="main">
-            <p class="subtitle" class="projectName">Projects</p>
             <section id="projectset">
+                <p class="subtitle" class="projectName">Projects</p>
                 <div class="card">
-                    <a href="https://codefug.github.io/loginFormProject" class="cardImage Loginform"></a>
+                    <a href="https://codefug.github.io/loginFormProject" class="Loginform">
+                        <img src="/LoginForm.png" alt="LoginForm Project">
+                    </a>
                     <a href="https://github.com/codefug/loginFormProject">Login Form Project</a>
                 </div>
                 <div class="card">
-                    <a href="https://codefug.github.io/CalculatorProject" class="cardImage Calculator"></a>
+                    <a href="https://codefug.github.io/CalculatorProject" class="Calculator">
+                        <img src="/Calculator.png" alt="Calculator Project">
+                    </a>
                     <a href="https://github.com/codefug/CalculatorProject">Calculator Project</a>
                 </div>
                 <div class="card">
-                    <a href="https://codefug.github.io/Etch-a-Sketch" class="cardImage Sketch"></a>
+                    <a href="https://codefug.github.io/Etch-a-Sketch" class="Sketch">
+                        <img src="/Sketch.png" alt="Sketch Project">
+                    </a>
                     <a href="https://github.com/codefug/Etch-a-Sketch">Etch-a-Sketch</a>
                 </div>
                 <div class="card">
-                    <a href="https://codefug.github.io/RockScissorsPaper" class="cardImage RockScissorsPaper"></a>
+                    <a href="https://codefug.github.io/RockScissorsPaper" class="RockScissorsPaper">
+                        <img src="/RockScissorsPaper.png" alt="RockScissorsPaper">
+                    </a>
                     <a href="https://github.com/codefug/RockScissorsPaper">RockScissorsPaper</a>
                 </div>
                 <div class="card lastcard">
                     <p>+</p>
                 </div>
             </section>
-            <p class="subtitle" id="newsName">News</p>
-            <div class="card newset">
-                <a href="" class="news" style="font-size:0.6rem">
-                    news! Lee seung hyun has completed his own portfolio project right before!!
-                    you will get stunned looking his honorable masterpieces.
-                </a>
-                <a href="" class="news">2</a>
-                <a href="" class="news">3</a>
+            <div id="newset" class="card">
+                <p class="subtitle" id="newsName">News</p>
+
+                <div class="news"><a href="">
+                        news! Lee seung hyun has completed his own portfolio project right before!!
+                        you will get stunned looking his honorable masterpieces.
+                    </a></div>
+                <div class="news"><a href="">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique dolore
+                        consequuntur iure alias culpa repellendus voluptas, deleniti et veritatis assumenda laboriosam
+                        perspiciatis praesentium doloribus id laudantium eum? Ipsa, eaque. Perferendis.</a></div>
+                <div class="news"><a href="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum cum aliquid
+                        provident autem, repudiandae optio rerum fugiat eos reprehenderit eveniet quibusdam distinctio
+                        excepturi ad quae inventore possimus odit vitae consequatur?</a></div>
             </div>
-            <p class="subtitle" id="friendsName">Friends</p>
             <section id="friendset" class="card">
+                <p class="subtitle" id="friendsName">Friends</p>
                 <a href="https://www.instagram.com/jungwon_hyun1/">
                     <p>jungwon_hyun1</p>
                 </a>
-                <a href="https://www.instagram.com/tae_hweee/"><img src="" alt="" class="friendprofile">
+                <a href="https://www.instagram.com/tae_hweee/">
                     <p>tae_hweee</p>
                 </a>
-                <a href="https://www.instagram.com/l_sternstunde/"><img src="" alt="" class="friendprofile">
+                <a href="https://www.instagram.com/l_sternstunde/">
                     <p>
                         l_sternstunde
                     </p>
                 </a>
-                <a href="https://www.instagram.com/c.est_trop_banal/"><img src="" alt="" class="friendprofile">
+                <a href="https://www.instagram.com/c.est_trop_banal/">
                     <p>
                         c.est_trop_banal
                     </p>

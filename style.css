@@ -4,6 +4,38 @@
     src: url(font/SpectralSC-Bold.ttf);
     font-weight: bold;
 }
+/* loading 설정 */
+#Loading{
+    position:fixed;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    z-index: 1;
+    background-image: linear-gradient(to right top,skyblue,rgb(210, 242, 255));
+    display:grid;
+    grid-template: 1fr 2fr 1fr/ 1fr 2fr 1fr;
+}
+#LoadingBox{
+    border-color: 1px solid black;
+    grid-column: 2/3;
+    grid-row:2/3;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    color:white;
+    background-image: linear-gradient(to right top,skyblue,white);
+    background-position: 100% 0%;
+    background-size: 200% 100%;
+    animation:flowloading 1s linear infinite;
+    z-index: 2;
+    border-radius: 20px;
+}
+@keyframes flowloading {
+    100%{
+        background-position: 0% 100%;
+    }
+}
 /* 전체 설정 */
 html{
     height:100vh;
@@ -11,26 +43,14 @@ html{
 body{
     height:100%;
 }
+a{
+    text-decoration: none;
+}
 
 /* img 설정 */
 img{
     border-radius: 100%;
-    width:100%;
-}
-.Loginform {
-    background-image: url(LoginForm.png);
-}
-
-.Calculator {
-    background-image: url(Calculator.png);
-}
-
-.Sketch {
-    background-image: url(Sketch.png);
-}
-
-.RockScissorsPaper {
-    background-image: url(RockScissorsPaper.png);
+    width:30px;
 }
 
 /* body */
@@ -41,44 +61,231 @@ body{
 #body{
     flex:1;
     display:grid;
-    grid-template: 1fr 4fr / 1fr 4fr;
+    grid-template: auto 1fr / auto 1fr;
 }
 
 /* header */
 header{
     display: grid;
-    grid-template: auto 1fr/ 3fr auto;
+    grid-template: auto 1fr/ 3fr 1fr 1fr;
     grid-column: 2/3;
     grid-row:1/2;
-    background-color: #ff000010;
+    padding-left:3rem;
+    background-color: #c2eabd50;
 }
-form{
-
+#headerSearchContainer{
+    display:flex;
+    gap:1rem;
+    align-items: center;
 }
-#headprofileContainer{
-    display: flex;
+#searchbar{
+    flex:1;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    background-color: inherit;
+    border-color: aqua;
+}
+#searchbutton{
+    border-radius: 20px;
+    background-image: linear-gradient(to top,rgba(166, 255, 255, 0.397),rgba(116, 255, 255));
+    box-shadow: 1px 1px black;
+}
+#searchbutton:hover{
+    background-color: rgb(201, 201, 201);
+    cursor:pointer;
+}
+#searchbutton>img{
+    aspect-ratio: 5/6;
+}
+#headerprofileContainer{
+    grid-column: 3/4;
+    display:flex;
+    gap:1rem;
+    justify-content: flex-end;
+}
+#headerprofileButton{
+    background-color: inherit;
+    border:none;
+    position:relative;
+}
+#headerprofileButton:hover{
+    cursor:pointer
+}
+#headerprofileButton:after{
+    position: absolute;
+    right:0;
+    content:"0";
+    background-color: red;
+    color:white;
+    padding-inline: 0.4rem;
+    border-radius:50%;
+}
+#headerprofile{
+    align-self: center;
+    width:2rem;    
+}
+#headerprofileContainer>p:hover{
+    cursor:pointer;
 }
 #contentprofileContainer{
     display: flex;
+    align-items: center;
+    padding-block:1rem;
+}
+#contentprofileContainer>img{
+    width:2rem;
+}
+#contentprofileContainer>div{
+    display:flex;
+    flex-direction: column;
+    gap:0.3rem;
+}
+#contentprofileContainer>div>p{
+    margin:0;
+    font-size: 0.666rem;
+}
+#contentprofileContainer>div>p+p{
+    font-size:1rem;
+    color:rgb(0, 139, 139);
+    background-color: white;
+    border-radius: 20px;
+    padding: 0 5px;
+}
+#contentprofileContainer>div>p+p:hover{
+    cursor:pointer;
 }
 #buttonContainer{
-
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap:2rem;
+}
+#buttonContainer>button{
+    border-radius: 0.5rem;
+    padding:0.3rem;
+    color:rgb(0, 89, 255);
+    background-image:radial-gradient(rgba(166, 255, 255, 0.397),rgba(116, 255, 255));
+}
+#buttonContainer>button:hover{
+    cursor:pointer;
 }
 /* sidebar */
 sidebar{
     grid-row:1/-1;
     background-color: #0000ff10;
+    display:flex;
+    flex-direction: column;
+    gap:4rem;
+    background-color: #e7f7ffa3;
+    border-left: 1rem solid #00ffff5a;
 }
+.headlogoContainer{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    border-top-right-radius: 3rem;
+    border-bottom-right-radius: 3rem;
+    padding-right:2rem;
+}
+#headlogo{
+    border-radius:0%;
+    width:3rem;
+}
+.headlogoContainer>*:hover{
+    cursor:pointer;
+}
+.headlogoContainer:hover{
+    background-color: #00ffff5a;
+}
+.sidebarlistitem{
+    align-self: stretch;
+    display:flex;
+    justify-content: center;
+    gap:1rem;
+    border-top-right-radius: 3rem;
+    border-bottom-right-radius: 3rem;
+    padding-right:2rem;
+    padding-block: 1rem;
+}
+.sidebarlistitem:hover{
+    background-color: #00ffff5a;
+    cursor: pointer;
+}
+
 /* #main */
 #main{
-    background-color: #00ff0010;
+    background-color: #d3d3e85a;
+    display: grid;
+    grid-template: auto auto 1fr/1fr auto;
+    padding-bottom: 3rem;
+}
+#newset{
+    grid-row:1/2;
+    grid-column: 2/3;
+    position: relative;
+    padding-top: 3rem;
+    margin-bottom: 3rem;
+    height:auto;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap:3rem;
+    padding-inline:1rem;
+}
+#newset>*{
+    padding-bottom: 3rem;
+    border-bottom:1px solid #0000ff10;
+}
+
+#friendset{
+    grid-column: 2/3;
+    grid-row:2/3;
+    position: relative;
+    padding-top: 3rem;
+    height:auto;
+    display:flex;
+    flex-direction: column;
+    padding-inline:1rem;
+}
+#projectset{
+    grid-column:1/2;
+    grid-row:1/-1;
+    display:grid;
+    grid-template: auto/repeat(auto-fit,300px);
+    padding-top:3rem;
+    position:relative;
+    gap:3rem;
+    padding-left: 3rem;
+}
+.subtitle{
+    position:absolute;
+    top:0;
+    left:3rem;
+    font-weight: bold;
+}
+.card{
+    background-color: rgb(201, 200, 200);
+    border-radius: 10px;
+    width:300px;
+    height:557px;
+}
+.card>a>img{
+    width:300px;
+    border-radius: 10px;
+}
+.lastcard{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+}
+.lastcard:hover{
+    cursor:pointer;
 }
 /* footer */
 footer{
     background-color: black;
     color:white;
-    opacity: 0.6;
-    z-index: 1;
 }
 footer p{
     margin:0px;
