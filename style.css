@@ -4,10 +4,18 @@
     src: url(font/SpectralSC-Bold.ttf);
     font-weight: bold;
 }
+/* 전체 설정 */
+html{
+    height:100vh;
+}
+body{
+    height:100%;
+}
 
 /* img 설정 */
 img{
-    width: 40px;
+    border-radius: 100%;
+    width:100%;
 }
 .Loginform {
     background-image: url(LoginForm.png);
@@ -42,6 +50,7 @@ header{
     grid-template: auto 1fr/ 3fr auto;
     grid-column: 2/3;
     grid-row:1/2;
+    background-color: #ff000010;
 }
 form{
 
@@ -58,9 +67,12 @@ form{
 /* sidebar */
 sidebar{
     grid-row:1/-1;
+    background-color: #0000ff10;
 }
 /* #main */
-
+#main{
+    background-color: #00ff0010;
+}
 /* footer */
 footer{
     background-color: black;
